@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thao-tac-voi-mang</title>
+</head>
+<body>
+<input type="text" id="txtValue">
+<input type="button" id ="btnAdd" value="Add" onclick="add()">
+<input type="button" id="btnDisplay" value="display" onclick="display()">
+<div id="result"></div>
+
+<script>
+    let array = Array();
+    let x = 0;
+    function  add() {
+    array[x] = document.getElementById("txtValue").value;
+    alert('Số '+array[x]+ ' đã được thêm vào mảng tại vị trí ' + x );
+    x++;
+    document.getElementById('txtValue').value ="";
+    }
+    
+    function display() {
+        let result = "";
+        for (i=0;i<array.length;i++){
+            result += "Phần tử " + i + " = " + array[i] + "<br>";
+        }
+        document.getElementById('result').innerHTML = result;
+    }
+</script>
+</body>
+</html>
